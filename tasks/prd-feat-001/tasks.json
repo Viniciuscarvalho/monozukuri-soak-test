@@ -1,0 +1,46 @@
+[
+  {
+    "id": "task-001",
+    "title": "Create logger module with error, warn, and info functions",
+    "description": "Implement src/utils/logger.js exporting error(), warn(), and info() functions. Each accepts a required message string and optional context object, and writes to the appropriate console method (console.error, console.warn, console.log) with a formatted string: [ISO timestamp] [LEVEL] message [optional JSON context].",
+    "files_touched": [
+      "src/utils/logger.js"
+    ],
+    "acceptance_criteria": [
+      "logger.js exports error, warn, and info as named functions",
+      "Each function writes to the correct console method (error→console.error, warn→console.warn, info→console.log)",
+      "Output format is [ISO8601] [LEVEL] <message> with optional JSON-serialized context appended when provided",
+      "Calling any function without a context argument does not print 'undefined'"
+    ]
+  },
+  {
+    "id": "task-002",
+    "title": "Write unit tests for logger module",
+    "description": "Create src/utils/logger.test.js using Node's built-in test runner (node:test + node:assert/strict). Tests must cover all three log functions, timestamp format, context serialization, and the no-context edge case.",
+    "files_touched": [
+      "src/utils/logger.test.js"
+    ],
+    "acceptance_criteria": [
+      "Tests import logger using require('./logger')",
+      "info() test asserts output matches /^\\[\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z\\] \\[INFO\\]/",
+      "warn() test asserts output goes to console.warn with [WARN] level",
+      "error() test asserts output goes to console.error with [ERROR] level",
+      "Context serialization test asserts JSON appears after the message",
+      "No-context test asserts 'undefined' does not appear in output",
+      "All tests pass when run with npm test"
+    ]
+  },
+  {
+    "id": "task-003",
+    "title": "Wire test script in package.json",
+    "description": "Add a 'test' script to package.json that runs all *.test.js files under src/ using Node's built-in test runner, so npm test exercises the full test suite including the new logger tests.",
+    "files_touched": [
+      "package.json"
+    ],
+    "acceptance_criteria": [
+      "package.json has a 'test' script entry",
+      "Running npm test executes logger.test.js and any other test files under src/",
+      "npm test exits 0 when all tests pass"
+    ]
+  }
+]
