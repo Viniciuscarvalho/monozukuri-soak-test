@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-05-11T13:53:04.014Z",
+  "entries": {
+    "feat-001::feature": {
+      "feat_id": "feat-001",
+      "task_id": "feature",
+      "stack": "node",
+      "classification_label": "unknown",
+      "preferred_agent": "",
+      "resolved_agent": "claude-code",
+      "file_paths": "/Users/viniciuscarvalho/Documents/monozukuri-soak-test/.worktrees/feat-001/src/index.js:",
+      "cached_at": "2026-05-11T13:53:14.476Z"
+    }
+  }
+}

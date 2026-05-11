@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-11T13:53:01.228Z",
+  "node": "v22.18.0",
+  "npm": "11.6.1",
+  "git": "git version 2.45.2",
+  "gh": "gh version 2.89.0 (2026-03-26)",
+  "python": "Python 3.13.11",
+  "rust": null,
+  "go": "go version go1.25.6 darwin/arm64",
+  "swift": "Apple Swift version 6.3.1 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)",
+  "package_managers": {
+    "npm": true,
+    "yarn": false,
+    "pnpm": false,
+    "bun": true,
+    "pip": true,
+    "cargo": false
+  },
+  "project_files": {
+    "package_json": true,
+    "cargo_toml": false,
+    "requirements_txt": false,
+    "go_mod": false,
+    "package_swift": false
+  }
+}

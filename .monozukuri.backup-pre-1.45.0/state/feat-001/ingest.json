@@ -1,0 +1,9 @@
+[
+  {
+    "type": "review_ingest",
+    "feat_id": "feat-001",
+    "pr_url": "https://github.com/Viniciuscarvalho/monozukuri-soak-test/pull/1",
+    "ran_at": "2026-05-11T14:02:28.828Z",
+    "fixes_written": 0
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-05-11T13:53:01.118Z",
+  "provider": "ollama",
+  "endpoint": "http://localhost:11434",
+  "reachable": true,
+  "http_code": "200"
+}

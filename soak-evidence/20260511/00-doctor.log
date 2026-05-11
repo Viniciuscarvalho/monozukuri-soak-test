@@ -1,0 +1,8 @@
+[1mMonozukuri — pre-flight checks[0m
+
+  [38;2;49;213;139m✓[0m node 22.18.0
+  [38;2;49;213;139m✓[0m jq 1.8.1
+  [38;2;49;213;139m✓[0m gh authenticated
+  [38;2;49;213;139m✓[0m git worktree available
+  [38;2;49;213;139m✓[0m claude CLI found
+  [38;2;49;213;139m✓[0m gum gum version 0.17.0 (interactive mode enabled)

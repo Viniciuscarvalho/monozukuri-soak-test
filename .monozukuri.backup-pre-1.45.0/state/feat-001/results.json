@@ -1,0 +1,38 @@
+{
+  "feature_id": "feat-001",
+  "status": "completed",
+  "title": "Add error logging utility",
+  "duration_seconds": 548,
+  "state_version": 1,
+  "pipeline": {
+    "prd": {
+      "status": "completed"
+    },
+    "techspec": {
+      "status": "pending"
+    },
+    "tasks": {
+      "status": "pending"
+    },
+    "implementation": {
+      "status": "pending"
+    },
+    "tests": {
+      "status": "pending"
+    },
+    "review": {
+      "status": "completed",
+      "pr_url": "https://github.com/Viniciuscarvalho/monozukuri-soak-test/pull/1"
+    }
+  },
+  "context_generated": {
+    "files_created": [],
+    "files_modified": [],
+    "schema_changes": [],
+    "new_dependencies": [],
+    "breaking_changes": []
+  },
+  "pr_url": "https://github.com/Viniciuscarvalho/monozukuri-soak-test/pull/1",
+  "errors": [],
+  "tasks": []
+}

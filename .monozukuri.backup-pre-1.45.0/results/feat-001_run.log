@@ -1,0 +1,7 @@
+**Update notifications:**
+- New mcs version 2026.4.28 is available (installed: 2026.4.1). Run: `brew upgrade mcs-cli/tap/mcs`
+- 1 tech pack has updates available. Run: `mcs pack update`
+
+---
+
+Now let me find the existing techspec and related artifacts to regenerate it properly.The validation expects a `Files Likely Touched` section with bulleted file paths. Let me rewrite the techspec, preserving all content and adding that section.Techspec rewritten. The new version adds a `Files Likely Touched` section at the top with the required bulleted list (`- src/utils/logger.js`, `- src/utils/logger.test.js`, `- package.json`, `- src/index.js`), while preserving every other section in full.Techspec rewritten. The new version adds a `Files Likely Touched` section at the top with the required bulleted list (`- src/utils/logger.js`, `- src/utils/logger.test.js`, `- package.json`, `- src/index.js`), while preserving every other section in full.

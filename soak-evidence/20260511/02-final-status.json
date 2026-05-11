@@ -1,0 +1,10 @@
+{"features":[{
+  "state_version": 1
+  "feature_id": "feat-001"
+  "status": "pr-created"
+  "worktree": "/Users/viniciuscarvalho/Documents/monozukuri-soak-test/.worktrees/feat-001"
+  "branch": "feat/feat-001"
+  "created_at": "2026-05-11T13:53:03Z"
+  "updated_at": "2026-05-11T14:02:27.220Z"
+  "phase": "complete"
+}],"summary":{"total":1,"done":0,"pr":1,"ready":0,"failed":0},"skills":{"total":54,"project":0,"global":54}}
