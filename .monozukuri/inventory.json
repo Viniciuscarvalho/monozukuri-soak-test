@@ -1,0 +1,18 @@
+{
+  "stack": "nodejs",
+  "files": [
+    ".claude/settings.json",
+    ".git",
+    "package.json",
+    "src/index.js"
+  ],
+  "manifest": {
+    "name": "monozukuri-soak-test",
+    "scripts": [
+      "test"
+    ],
+    "dependencies": [],
+    "devDependencies": []
+  },
+  "symbols": []
+}

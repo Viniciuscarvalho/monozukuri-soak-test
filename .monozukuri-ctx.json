@@ -1,0 +1,26 @@
+{
+  "FEATURE_ID": "feat-001",
+  "FEATURE_TITLE": "Add error logging utility",
+  "SOURCE_REF": "markdown",
+  "DATE": "2026-05-11",
+  "STATUS": "draft",
+  "STACK": "nodejs",
+  "LANGUAGES": "",
+  "FRAMEWORKS": "",
+  "PACKAGE_MANAGER": "npm",
+  "TEST_FRAMEWORK": "",
+  "ENTRY_POINTS": "",
+  "ORIGINAL_PROMPT": "**Description:** Create `src/utils/logger.js` with `error()`, `warn()`, and `info()` functions that take a message and optional context object. Output to console with timestamps.\n**Complexity:** S",
+  "MAX_FILES": "50",
+  "project_learnings": [
+    {
+      "summary": "See AGENTS.md for additional conventions"
+    },
+    {
+      "summary": "See CLAUDE.md for additional conventions"
+    },
+    {
+      "summary": "See .claude/CLAUDE.md for additional conventions"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "task-001",
+    "title": "Create src/utils/logger.js with info, warn, error exports",
+    "description": "Implement the stateless ESM logger module at src/utils/logger.js. Export three named functions — info(), warn(), error() — each accepting (message, context = {}). Each function must: (1) capture new Date().toISOString() as timestamp, (2) build a prefix [timestamp] [LEVEL], (3) call the matching console method with the prefix and message, appending context only when it has own enumerable keys. Follows the export function pattern from src/index.js. No dependencies, no default export.",
+    "files_touched": [
+      "src/utils/logger.js"
+    ],
+    "acceptance_criteria": [
+      "src/utils/logger.js exists and uses ESM named exports (no default export)",
+      "Importing and calling info('msg') logs a line starting with an ISO 8601 timestamp followed by [INFO]",
+      "Calling error('msg', { code: 42 }) passes the context object as a third argument to console.error",
+      "Calling warn('msg') with no context argument does NOT pass a trailing empty object to console.warn",
+      "No new packages appear in package.json after creating this file"
+    ]
+  },
+  {
+    "id": "task-002",
+    "title": "Update package.json test script to run node:test",
+    "description": "Replace the placeholder test script in package.json with node --test 'src/**/*.test.js' so that npm test executes the built-in Node test runner against all *.test.js files under src/. This unblocks task-003 and task-004 without adding any new dependencies.",
+    "files_touched": [
+      "package.json"
+    ],
+    "acceptance_criteria": [
+      "package.json scripts.test equals \"node --test 'src/**/*.test.js'\" or an equivalent glob that matches src/utils/logger.test.js",
+      "npm test exits non-zero only because no test files exist yet (not due to a missing or broken script)",
+      "No new entries appear in dependencies or devDependencies"
+    ]
+  },
+  {
+    "id": "task-003",
+    "title": "Create src/utils/logger.test.js with unit tests for all three functions",
+    "description": "Write a test file at src/utils/logger.test.js using node:test and node:assert/strict. Cover all three exported functions (info, warn, error) with three scenarios each: message only, message + non-empty context, and message + explicit null context (must not crash). Use console method spying via a mock or by temporarily replacing console.info/warn/error to assert the correct arguments are passed.",
+    "files_touched": [
+      "src/utils/logger.test.js"
+    ],
+    "acceptance_criteria": [
+      "File imports from 'node:test' and 'node:assert/strict' only — no third-party test libs",
+      "Tests assert that the first argument to the underlying console method starts with a string matching /^\\[\\d{4}-.*\\] \\[(INFO|WARN|ERROR)\\]/",
+      "Tests assert context is passed when provided and omitted when not provided",
+      "Tests assert that passing null as context does not throw",
+      "All tests in the file are syntactically valid and discoverable by node --test"
+    ]
+  },
+  {
+    "id": "task-004",
+    "title": "Run npm test and confirm all tests pass (exit 0 gate)",
+    "description": "Execute npm test to run the full node:test suite and verify it exits 0. This is the cycle gate: all prior tasks must be complete before this task starts. Fix any failures discovered during the run before marking this task done.",
+    "files_touched": [
+      "src/utils/logger.js",
+      "src/utils/logger.test.js",
+      "package.json"
+    ],
+    "acceptance_criteria": [
+      "npm test exits with code 0",
+      "Output shows 3 passing tests (one per exported function, or more if sub-cases are split)",
+      "No test is marked as skipped or failing",
+      "No changes to source files are required after this step (implementation is stable)"
+    ]
+  }
+]
