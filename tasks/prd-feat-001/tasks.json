@@ -1,0 +1,45 @@
+[
+  {
+    "id": "task-001",
+    "title": "Implement logger utility module",
+    "description": "Create src/utils/logger.js exporting error(), warn(), and info() functions. Each function accepts a message string and an optional context object, and writes a formatted line (ISO timestamp + level + message + optional JSON context) to the appropriate console method: console.error for error(), console.warn for warn(), console.log for info().",
+    "files_touched": [
+      "src/utils/logger.js"
+    ],
+    "acceptance_criteria": [
+      "src/utils/logger.js exists and exports { error, warn, info }",
+      "info('msg') writes a line matching /^\\[\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z\\] \\[INFO\\] msg$/ to console.log",
+      "warn('msg') writes a line containing '[WARN] msg' to console.warn",
+      "error('msg') writes a line containing '[ERROR] msg' to console.error",
+      "Passing a context object appends its JSON serialization to the output line",
+      "Omitting the context argument produces no 'undefined' in the output"
+    ]
+  },
+  {
+    "id": "task-002",
+    "title": "Write unit tests for the logger",
+    "description": "Create src/utils/logger.test.js using Node's built-in node:test runner (no third-party deps). Capture console output with a thin helper and assert format, level routing, context serialization, and no-context behavior for all three log functions.",
+    "files_touched": [
+      "src/utils/logger.test.js"
+    ],
+    "acceptance_criteria": [
+      "src/utils/logger.test.js exists and imports from node:test and node:assert/strict",
+      "Tests cover info(), warn(), and error() for both with-context and without-context cases",
+      "All tests pass when run with node --test src/utils/logger.test.js",
+      "No external test-framework packages are added to package.json"
+    ]
+  },
+  {
+    "id": "task-003",
+    "title": "Wire test script in package.json",
+    "description": "Add or update the 'test' script in package.json to run all *.test.js files under src/ using the native Node test runner (node --test). This lets npm test execute the full suite without additional tooling.",
+    "files_touched": [
+      "package.json"
+    ],
+    "acceptance_criteria": [
+      "package.json has a 'test' script that runs node --test (or equivalent) covering src/**/*.test.js",
+      "Running npm test exits 0 when all tests pass",
+      "Running npm test exits non-zero when a test fails"
+    ]
+  }
+]
