@@ -1,0 +1,41 @@
+[
+  {
+    "id": "task-001",
+    "title": "Wire test runner in package.json",
+    "description": "Replace the placeholder test script in package.json with the node:test runner command so tests can be discovered and executed via npm test.",
+    "files_touched": [
+      "package.json"
+    ],
+    "acceptance_criteria": [
+      "package.json scripts.test is set to 'node --test src/index.test.js'",
+      "Running npm test does not throw 'no tests yet' output"
+    ]
+  },
+  {
+    "id": "task-002",
+    "title": "Extend hello() with style parameter",
+    "description": "Add a second parameter style ('formal' | 'casual' | 'pirate') to the hello() function in src/index.js, defaulting to 'casual'. Use a STYLES map to produce different greeting formats per style; unknown styles fall back to 'casual'.",
+    "files_touched": [
+      "src/index.js"
+    ],
+    "acceptance_criteria": [
+      "hello('Alice') returns a casual greeting (default unchanged behaviour)",
+      "hello('Alice', 'formal') returns a formal greeting distinct from casual",
+      "hello('Alice', 'pirate') returns a pirate-style greeting",
+      "hello('Alice', 'unknown') falls back to the casual greeting without throwing"
+    ]
+  },
+  {
+    "id": "task-003",
+    "title": "Write unit tests for greeting styles",
+    "description": "Create src/index.test.js using node:test (no new dependencies). Cover: default casual style, explicit casual, formal, pirate, and unknown-style fallback.",
+    "files_touched": [
+      "src/index.test.js"
+    ],
+    "acceptance_criteria": [
+      "npm test exits with code 0",
+      "All 5 test cases pass: default, casual, formal, pirate, unknown-style fallback",
+      "No external test-framework dependencies added to package.json"
+    ]
+  }
+]

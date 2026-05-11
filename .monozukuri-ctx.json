@@ -1,0 +1,26 @@
+{
+  "FEATURE_ID": "feat-003",
+  "FEATURE_TITLE": "Add greeting customization",
+  "SOURCE_REF": "markdown",
+  "DATE": "2026-05-11",
+  "STATUS": "draft",
+  "STACK": "nodejs",
+  "LANGUAGES": "",
+  "FRAMEWORKS": "",
+  "PACKAGE_MANAGER": "npm",
+  "TEST_FRAMEWORK": "",
+  "ENTRY_POINTS": "",
+  "ORIGINAL_PROMPT": "**Description:** Extend the existing `hello()` function in `src/index.js` to accept a second parameter `style` ('formal' | 'casual' | 'pirate'). Default 'casual'.\n**Complexity:** S",
+  "MAX_FILES": "50",
+  "project_learnings": [
+    {
+      "summary": "See AGENTS.md for additional conventions"
+    },
+    {
+      "summary": "See CLAUDE.md for additional conventions"
+    },
+    {
+      "summary": "See .claude/CLAUDE.md for additional conventions"
+    }
+  ]
+}
