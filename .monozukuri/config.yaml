@@ -1,0 +1,27 @@
+agent: claude-code
+autonomy: full_auto
+
+source:
+  adapter: markdown
+  output: orchestration-backlog.json
+  markdown:
+    file: features.md
+
+execution:
+  base_branch: master
+  max_concurrent: 1
+  skip_done: true
+  skip_blocked: true
+
+worktrees:
+  base_path: .monozukuri/worktrees
+  branch_prefix: feat
+  auto_cleanup: false
+
+pr_creation:
+  strategy: ready
+
+safety:
+  breaking_change_pause: false
+  schema_migration_review: false
+  max_file_changes: 20
