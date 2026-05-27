@@ -1,0 +1,16 @@
+[
+  {
+    "id": "task-001",
+    "title": "Add canary marker module",
+    "description": "Create the dependency-free ESM module for FR-001 and keep existing project behavior unchanged for FR-002, NFR-001, NFR-002, and NFR-003. This task is sized for less than 60 minutes and only modifies the new marker file.",
+    "files_touched": [
+      "src/canary-marker.js"
+    ],
+    "acceptance_criteria": [
+      "src/canary-marker.js exists and exports a named canaryMarker function.",
+      "node --input-type=module -e \"import('./src/canary-marker.js').then(m=>{if(typeof m.canaryMarker!=='function')process.exit(1);if(m.canaryMarker()!=='monozukuri-v2-canary-ready')process.exit(1)})\" exits 0.",
+      "Inspection of src/canary-marker.js shows a literal constant-time return and no I/O, environment access, timers, randomness, logging, dynamic marker construction, or runtime dependencies.",
+      "npm test exits 0 with the existing script, and scoped diff inspection shows src/index.js and package.json remain unchanged."
+    ]
+  }
+]
