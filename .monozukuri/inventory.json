@@ -1,0 +1,13 @@
+{
+  "stack": "nodejs",
+  "files": [],
+  "manifest": {
+    "name": "monozukuri-soak-test",
+    "scripts": [
+      "test"
+    ],
+    "dependencies": [],
+    "devDependencies": []
+  },
+  "symbols": []
+}

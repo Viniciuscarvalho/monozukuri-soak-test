@@ -1,0 +1,18 @@
+[
+  {
+    "id": "task-001",
+    "title": "Add canary marker module",
+    "description": "Create the deterministic src/canary-marker.js named export for FR-001 while preserving existing fixture behavior for FR-002. Keep the implementation pure, dependency-free, constant-time, and free of I/O or runtime state access for NFR-001 and NFR-002, then verify the existing npm test script still passes for NFR-003. Estimated agent time: <= 60 minutes.",
+    "files_touched": [
+      "src/canary-marker.js"
+    ],
+    "acceptance_criteria": [
+      "src/canary-marker.js exists and exports a named canaryMarker function.",
+      "node --input-type=module -e \"import('./src/canary-marker.js').then(m=>{if(m.canaryMarker()!=='monozukuri-v2-canary-ready')process.exit(1)})\" exits 0.",
+      "node --check src/canary-marker.js exits 0.",
+      "Inspection of src/canary-marker.js shows canaryMarker returns the exact string monozukuri-v2-canary-ready with no file, network, environment, process, or other runtime state access.",
+      "git diff --check exits 0 and the implementation diff does not modify package.json, src/index.js, dependencies, scripts, workflow files, or unrelated files.",
+      "npm test exits 0, proving the existing fixture behavior still passes."
+    ]
+  }
+]
