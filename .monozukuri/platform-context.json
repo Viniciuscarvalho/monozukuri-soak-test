@@ -1,0 +1,22 @@
+{
+  "primary_platform": "nodejs",
+  "platforms": [
+  {
+    "type": "nodejs",
+    "subtype": "node",
+    "path": ".",
+    "confidence": "medium",
+    "signals": [
+      "--",
+      "package.json found"
+    ],
+    "package_manager": "npm",
+    "package_manager_lock": "",
+    "test_command": "npm test",
+    "build_command": "npm run build",
+    "lint_command": "npm run lint"
+  }
+],
+  "is_monorepo": false,
+  "detected_at": "2026-05-27T15:29:39Z"
+}
