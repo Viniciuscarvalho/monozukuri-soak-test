@@ -1,0 +1,19 @@
+[
+  {
+    "id": "task-001",
+    "title": "Add canary metadata module",
+    "description": "Create the deterministic ES module for FR-001, NFR-001, and NFR-002, preserving FR-002 and NFR-003 by avoiding changes to existing exports, scripts, dependencies, and runtime configuration. Estimated agent time: 30 minutes.",
+    "files_touched": [
+      "src/canary-metadata.js"
+    ],
+    "acceptance_criteria": [
+      "`src/canary-metadata.js` exists and exports a named `canaryMetadata` function.",
+      "`canaryMetadata()` returns exactly `{ project: \"monozukuri-soak-test\", purpose: \"v2-live-canary\" }` with no extra fields.",
+      "The implementation is synchronous and contains no filesystem reads, network calls, environment reads, logging, dependencies, or async work.",
+      "`npm test` exits successfully after the change.",
+      "`node -e \"import('./src/canary-metadata.js').then(m=>{const got=m.canaryMetadata(); const exp={project:'monozukuri-soak-test',purpose:'v2-live-canary'}; if(JSON.stringify(got)!==JSON.stringify(exp)) process.exit(1);})\"` exits successfully.",
+      "`node -e \"import('./src/index.js').then(m=>{if(m.hello('world')!=='Hello, world!') process.exit(1);})\"` exits successfully.",
+      "`package.json` and `src/index.js` remain unchanged by the implementation."
+    ]
+  }
+]
