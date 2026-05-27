@@ -1,0 +1,17 @@
+[
+  {
+    "id": "task-001",
+    "title": "Add canary marker module",
+    "description": "Create the isolated ES module src/canary-marker.js exporting canaryMarker() with the exact monozukuri-v2-canary-ready return value. Keep the task within 60 minutes and do not modify src/index.js, package metadata, dependencies, or unrelated files so FR-001, FR-002, NFR-001, NFR-002, and NFR-003 are all covered.",
+    "files_touched": [
+      "src/canary-marker.js"
+    ],
+    "acceptance_criteria": [
+      "src/canary-marker.js exists and exports a named canaryMarker function.",
+      "The command node -e \"import('./src/canary-marker.js').then(m=>{if(typeof m.canaryMarker!=='function')throw new Error('missing canaryMarker'); if(m.canaryMarker()!=='monozukuri-v2-canary-ready')throw new Error('bad marker');})\" exits 0.",
+      "npm test exits 0, preserving the existing package behavior.",
+      "git diff -- src/index.js package.json exits 0 with no diff output, confirming existing API and package metadata were not changed.",
+      "Inspection of src/canary-marker.js shows no imports, I/O, environment reads, network calls, filesystem reads, logging, mutation, or new runtime dependencies."
+    ]
+  }
+]
