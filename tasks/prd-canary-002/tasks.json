@@ -1,0 +1,18 @@
+[
+  {
+    "id": "task-001",
+    "title": "Add canary metadata module",
+    "description": "Create the deterministic src/canary-metadata.js helper with a named canaryMetadata export, preserve src/index.js and package.json behavior, and verify FR-001, FR-002, NFR-001, NFR-002, and NFR-003 with inspection plus the TechSpec validation commands. This task is scoped to <= 60 minutes and one implementation file.",
+    "files_touched": [
+      "src/canary-metadata.js"
+    ],
+    "acceptance_criteria": [
+      "src/canary-metadata.js exports a named canaryMetadata function with no default export replacing it.",
+      "Calling canaryMetadata() returns an object whose project field is exactly \"monozukuri-soak-test\" and whose purpose field is exactly \"v2-live-canary\".",
+      "src/canary-metadata.js contains only deterministic object construction and performs no I/O, environment, file, network, process, or dependency access.",
+      "src/index.js remains unchanged and continues to expose the existing hello export.",
+      "package.json remains unchanged with no new runtime dependencies or script changes.",
+      "npm test, git diff --check, node --check src/canary-metadata.js, and the direct node --input-type=module import check all exit 0."
+    ]
+  }
+]

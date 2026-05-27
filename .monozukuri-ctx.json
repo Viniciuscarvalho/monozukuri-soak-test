@@ -1,0 +1,20 @@
+{
+  "FEATURE_ID": "canary-002",
+  "MONOZUKURI_FEATURE_ID": "canary-002",
+  "MONOZUKURI_WORKTREE": "/Users/viniciuscarvalho/Documents/monozukuri/.worktrees/codex-v2-alpha-integration/.qa/reports/live-canary/work/codex/project/.monozukuri/worktrees/loop-2026-05-27-0fb4f1/canary-002",
+  "MONOZUKURI_AUTONOMY": "full_auto",
+  "FEATURE_TITLE": "Add release canary metadata",
+  "SOURCE_REF": "markdown",
+  "DATE": "2026-05-27",
+  "STATUS": "draft",
+  "STACK": "nodejs",
+  "LANGUAGES": "",
+  "FRAMEWORKS": "",
+  "PACKAGE_MANAGER": "npm",
+  "TEST_FRAMEWORK": "",
+  "ENTRY_POINTS": "",
+  "ORIGINAL_PROMPT": "**Description:** Add `src/canary-metadata.js` exporting a `canaryMetadata()` function that returns an object with `project: \"monozukuri-soak-test\"` and `purpose: \"v2-live-canary\"`. Keep the change small and deterministic.\n**Complexity:** S",
+  "MAX_FILES": "20",
+  "LEARNINGS_BLOCK": "No prior learnings.",
+  "project_learnings": []
+}
